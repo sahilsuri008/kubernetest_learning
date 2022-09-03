@@ -10,17 +10,18 @@ A linux installation (Centos/RedHat/OEL/Ubuntu) with docker and kubectl installe
 Steps to setup KIND:
 
 1) Download the binary
-
+```
 curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.14.0/kind-linux-amd64
-
+```
 2) Make it executable and move it to /usr/local/bin
-
+```
 chmod +x ./kind
 mv ./kind /usr/local/bin/kind
-
+```
 3) Create the KIND cluster configuration file
-The config file show below creates a cluster with one master node and two worker nodes.
 
+The config file show below creates a cluster with one master node and two worker nodes.
+```
 cat kind-example-config.yaml
 #three node (two workers) cluster config
 kind: Cluster
@@ -29,6 +30,7 @@ nodes:
 - role: control-plane
 - role: worker
 - role: worker
+```
 
 4) Create the cluster
 Execute the following command to create the cluster.
