@@ -35,6 +35,17 @@ nodes:
 4) Create the cluster
 Execute the following command to create the cluster.
 
-kind create cluster --config kind-example-config.yaml
+kind create cluster --config kind-example-config.yaml --name test-cluster
 
-5) 
+5) Verify cluster is up.
+To verify that our cluster is up and running, we could run the **kind get clusters** command.
+
+6) Using kubectl to interact with the cluster
+We could now set the context in our kubectl command so that we interact with our cluster.
+```
+kubectl config set-context kind-test-cluster
+```
+
+##### Note:
+Apparently, the kind setup did not work on a Centos 7 node with Docker installed. To get it to work, I first had to provision an Ubuntu 20.04 system, setup minikube on it using the script avaialbe in this repo.
+
