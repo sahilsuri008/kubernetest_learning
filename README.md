@@ -34,8 +34,9 @@ nodes:
 
 4) Create the cluster
 Execute the following command to create the cluster.
-
+```
 kind create cluster --config kind-example-config.yaml --name test-cluster
+```
 
 5) Verify cluster is up.
 To verify that our cluster is up and running, we could run the **kind get clusters** command.
