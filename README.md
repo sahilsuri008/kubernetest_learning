@@ -50,3 +50,16 @@ kubectl config set-context kind-test-cluster
 ##### Note:
 Apparently, the kind setup did not work on a Centos 7 node with Docker installed. To get it to work, I first had to provision an Ubuntu 20.04 system, setup minikube on it using the script avaialbe in this repo.
 
+## Generating YAML manifests
+
+We do not need to memorize the different components that go into the creation of YAML manifests for most deployment types. We could just create YAML files using the kubectl command, modify them as per our requirement and then apply them via kubectl.
+
+In the below example, we create a manifest file for deploying a single pod:
+
+```
+kubectl run  nginx-pod --image=nginx --dry-run=client -o yaml >> ngingx-pod.yaml
+```
+To create the pod, we simply need to apply the manifest.
+```
+kubectl apply -f ngingx-pod.yaml
+```
