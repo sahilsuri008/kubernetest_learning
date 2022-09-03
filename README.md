@@ -1,7 +1,7 @@
 # kubernetest_learning
 A repository of manifests created while learning Kubernetes
 
-KIND setup
+### KIND setup
 Kubernetes inside Docker (KIND) is a quck and easy way to setup a kubernetes cluster using Docker.
 
 Pre-requisites:
